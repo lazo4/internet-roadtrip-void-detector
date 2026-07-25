@@ -10,7 +10,7 @@ import { decodePanoId, isVoid } from "./void";
 
     GM_addStyle(`
         .void-detector-void path {
-            fill: #d91620 !important;
+            fill: #f00 !important;
         }
     `);
 
@@ -22,10 +22,6 @@ import { decodePanoId, isVoid } from "./void";
             let options: any[] = args[5];
 
             let arrows = Array.from(document.querySelectorAll(".option"));
-
-            for (const optionArrowEl of arrows) {
-                optionArrowEl.classList.remove("void-detector-void");
-            }
 
             // Now check all the options for voids
 
@@ -40,6 +36,8 @@ import { decodePanoId, isVoid } from "./void";
                     if (isVoid) {
                         console.log("[Void Detector] Void detected at option", idx);
                         arrows[idx]!.classList.add("void-detector-void");
+                    } else {
+                        arrows[idx]!.classList.remove("void-detector-void");
                     }
                 });
             }

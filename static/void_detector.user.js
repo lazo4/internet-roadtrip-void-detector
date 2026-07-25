@@ -168,7 +168,7 @@
         }
         GM_addStyle(`
         .void-detector-void path {
-            fill: #d91620 !important;
+            fill: #f00 !important;
         }
     `);
         let container = await IRF.vdom.container;
@@ -177,9 +177,6 @@
             apply: (target, thisArg, args) => {
                 let options = args[5];
                 let arrows = Array.from(document.querySelectorAll(".option"));
-                for (const optionArrowEl of arrows) {
-                    optionArrowEl.classList.remove("void-detector-void");
-                }
                 // Now check all the options for voids
                 for (let [idx, option] of options.entries()) {
                     let pano = decodePanoId(option.pano);
@@ -190,6 +187,9 @@
                         if (isVoid) {
                             console.log("[Void Detector] Void detected at option", idx);
                             arrows[idx].classList.add("void-detector-void");
+                        }
+                        else {
+                            arrows[idx].classList.remove("void-detector-void");
                         }
                     });
                 }
