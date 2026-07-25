@@ -2,7 +2,7 @@
 // @name        Internet Roadtrip Void Detector
 // @namespace   internet-roadtrip-void-detector
 // @match       https://neal.fun/internet-roadtrip/*
-// @version     0.0.0
+// @version     0.1.0
 // @author      lazo4
 // @description Detect and avoid void panos in the Internet Roadtrip.
 // @license     MIT

@@ -1,6 +1,6 @@
 {
   "name": "void-detector",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "lazo4",
   "description": "Detect and avoid void panos in the Internet Roadtrip.",
   "license": "MIT",
