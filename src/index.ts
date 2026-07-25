@@ -38,9 +38,11 @@ import { decodePanoId, isVoid } from "./void";
                 for (let [idx, option] of currentOptions.entries()) {
                     let pano = decodePanoId(option.pano);
 
-                    if (idx === 0) {
-                        pano = decodePanoId("CAoSHENJQUJJaERqSWFwZDZ1YzhLZjVfRzNaWFRSeVo.");
-                    }
+                    // Uncomment this if you want to see void detection in action
+
+                    // if (idx === 0) {
+                    //     pano = decodePanoId("CAoSHENJQUJJaERqSWFwZDZ1YzhLZjVfRzNaWFRSeVo.");
+                    // }
 
                     isVoid(pano).then(isVoid => {
                         const arrowEl = arrows[idx];
@@ -61,35 +63,5 @@ import { decodePanoId, isVoid } from "./void";
         configurable: true,
         enumerable: true,
     });
-
-    // // Execute code BEFORE a vue method executes
-    // container.state.changeStop = new Proxy(container.methods.changeStop, {
-    //     apply: (target, thisArg, args) => {
-    //         let options: any[] = args[5];
-
-    //         let arrows = Array.from(document.querySelectorAll(".option"));
-
-    //         // Now check all the options for voids
-
-    //         for (let [idx, option] of options.entries()) {
-    //             let pano = decodePanoId(option.pano);
-
-    //             if (idx === 0) {
-    //                 // pano = decodePanoId("CAoSHENJQUJJaERqSWFwZDZ1YzhLZjVfRzNaWFRSeVo.");
-    //             }
-
-    //             isVoid(pano).then(isVoid => {
-    //                 if (isVoid) {
-    //                     console.log("[Void Detector] Void detected at option", idx);
-    //                     arrows[idx]!.classList.add("void-detector-void");
-    //                 } else {
-    //                     arrows[idx]!.classList.remove("void-detector-void");
-    //                 }
-    //             });
-    //         }
-
-    //         return Reflect.apply(target, thisArg, args);
-    //     },
-    // });
 
 })();
