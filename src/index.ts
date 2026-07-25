@@ -29,7 +29,7 @@ import { decodePanoId, isVoid } from "./void";
                 let pano = decodePanoId(option.pano);
 
                 if (idx === 0) {
-                    pano = decodePanoId("CAoSHENJQUJJaERqSWFwZDZ1YzhLZjVfRzNaWFRSeVo.");
+                    // pano = decodePanoId("CAoSHENJQUJJaERqSWFwZDZ1YzhLZjVfRzNaWFRSeVo.");
                 }
 
                 isVoid(pano).then(isVoid => {
