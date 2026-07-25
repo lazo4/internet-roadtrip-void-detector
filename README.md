@@ -1,6 +1,6 @@
 # Internet Roadtrip Void Detector
 
-Detect and avoid voids in the <neal.fun/internet-roadtrip>
+Detect and avoid voids in the [neal.fun/internet-roadtrip](https://neal.fun/internet-roadtrip)
 
 ## Build locally
 
