@@ -2,6 +2,10 @@
 
 Detect and avoid voids in the [neal.fun/internet-roadtrip](https://neal.fun/internet-roadtrip)
 
+## Download from greasyfork
+
+This mod is available on [Greasyfork](https://greasyfork.org/en/scripts/588490-internet-roadtrip-void-detector)!
+
 ## Build locally
 
 To build the mod locally, you will need [Nodejs](https://nodejs.org/en/) and [Bun](https://bun.sh/) installed.
